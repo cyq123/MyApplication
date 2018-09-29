@@ -1,5 +1,7 @@
 package cyq.com.myapplication;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,9 +10,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +31,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                        .setAction("Action", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Toast.makeText(MainActivity.this, "点击了action", Toast.LENGTH_SHORT).show();
+                            }
+                        }).show();
             }
         });
+
+        TextView textView = findViewById(R.id.textview);
+        textView.setText("valueAnimator");
+
+        imageView = findViewById(R.id.img);
+        valueAnimator();
+    }
+
+    private void valueAnimator(){
+        ValueAnimator va = ValueAnimator.ofFloat(0,1720);
+        va.setDuration(1000);
+        va.setInterpolator(new AccelerateInterpolator());
+        va.setRepeatCount(-1);
+        va.setRepeatMode(ValueAnimator.REVERSE);
+        va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                float s = (float) valueAnimator.getAnimatedValue();
+//                textView.setText(s+"");
+//                imageView.setRotation(s);
+//                textView.setTranslationX(s);
+                imageView.setTranslationY(s);
+//                textView.setTranslationZ(s);
+            }
+        });
+        va.start();
     }
 
     @Override
@@ -44,9 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(this, "点击了settings", Toast.LENGTH_SHORT).show();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 }
