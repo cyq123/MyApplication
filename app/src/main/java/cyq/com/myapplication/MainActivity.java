@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 va.start();
-                                Toast.makeText(MainActivity.this, "点击了action", Toast.LENGTH_SHORT).show();
-
                             }
                         }).show();
             }
@@ -87,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.toleft) {
-            Toast.makeText(this, "点击了settings", Toast.LENGTH_SHORT).show();
             ObjectAnimator.ofFloat(imageView,"translationX",900,0).setDuration(2000).start();
             return true;
         }else if (id == R.id.toright){
