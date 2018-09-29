@@ -1,5 +1,6 @@
 package cyq.com.myapplication;
 
+import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
@@ -31,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", new View.OnClickListener() {
+                        .setAction("开始", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                va.start();
                                 Toast.makeText(MainActivity.this, "点击了action", Toast.LENGTH_SHORT).show();
+
                             }
                         }).show();
             }
@@ -46,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.img);
         valueAnimator();
     }
-
+    private ValueAnimator va;
     private void valueAnimator(){
-        ValueAnimator va = ValueAnimator.ofFloat(0,1720);
+        va = ValueAnimator.ofFloat(0,1720);
         va.setDuration(1000);
         va.setInterpolator(new AccelerateInterpolator());
-        va.setRepeatCount(-1);
+        va.setRepeatCount(1);
         va.setRepeatMode(ValueAnimator.REVERSE);
         va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -64,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 //                textView.setTranslationZ(s);
             }
         });
+
         va.start();
     }
 
@@ -82,9 +86,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.toleft) {
             Toast.makeText(this, "点击了settings", Toast.LENGTH_SHORT).show();
+            ObjectAnimator.ofFloat(imageView,"translationX",900,0).setDuration(2000).start();
             return true;
+        }else if (id == R.id.toright){
+            ObjectAnimator.ofFloat(imageView,"translationX",0,900).setDuration(2000).start();
         }
 
         return super.onOptionsItemSelected(item);
