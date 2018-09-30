@@ -3,6 +3,7 @@ package cyq.com.myapplication;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -89,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }else if (id == R.id.toright){
             ObjectAnimator.ofFloat(imageView,"translationX",0,900).setDuration(2000).start();
+        }else if (id == R.id.crossfade){
+            Intent intent = new Intent(this,CrossfadeActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
