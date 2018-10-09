@@ -22,7 +22,11 @@
         <activity
             android:name=".CrossfadeActivity"
             android:label="@string/title_activity_crossfade"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CardFlipActivity"
+            android:label="@string/title_activity_crossfade"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

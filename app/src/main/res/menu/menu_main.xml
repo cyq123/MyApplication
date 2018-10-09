@@ -26,4 +26,13 @@
         android:icon="@mipmap/ic_launcher"
         android:actionLayout="@layout/activity_main"
         />
+
+    <item
+        android:id="@+id/cardflip"
+        android:title="卡片翻转动画"
+        app:showAsAction="withText"
+        android:orderInCategory="97"
+        android:icon="@mipmap/ic_launcher"
+        android:actionLayout="@layout/activity_main"
+        />
 </menu>

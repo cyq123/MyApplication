@@ -93,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
         }else if (id == R.id.crossfade){
             Intent intent = new Intent(this,CrossfadeActivity.class);
             startActivity(intent);
+        }else if(id == R.id.cardflip){
+            Intent intent = new Intent(this,CardFlipActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
