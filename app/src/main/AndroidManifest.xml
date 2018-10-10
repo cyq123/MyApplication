@@ -27,6 +27,7 @@
             android:name=".CardFlipActivity"
             android:label="@string/title_activity_crossfade"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AnimaterVectorDrawableActivity"></activity>
     </application>
 
 </manifest>

@@ -96,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
         }else if(id == R.id.cardflip){
             Intent intent = new Intent(this,CardFlipActivity.class);
             startActivity(intent);
+        }else if(id == R.id.animatorvector){
+            Intent intent = new Intent(this,AnimaterVectorDrawableActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

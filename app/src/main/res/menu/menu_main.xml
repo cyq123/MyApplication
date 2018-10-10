@@ -35,4 +35,13 @@
         android:icon="@mipmap/ic_launcher"
         android:actionLayout="@layout/activity_main"
         />
+
+    <item
+        android:id="@+id/animatorvector"
+        android:title="animatorVectorDrawable"
+        app:showAsAction="withText"
+        android:orderInCategory="96"
+        android:icon="@mipmap/ic_launcher"
+        android:actionLayout="@layout/activity_main"
+        />
 </menu>

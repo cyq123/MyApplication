@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/vectordrawable">
+    <!-- 旋转的三角形动画，动画由vectordrawable、rotation、path_morph三个xml文件组成 -->
+    <target
+        android:animation="@animator/rotation"
+        android:name="rotationGroup"/>
+    <target
+        android:animation="@animator/path_morph"
+        android:name="v"/>
+</animated-vector>
