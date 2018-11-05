@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/vectordrawable2">
+
+    <!--<target
+        android:animation="@animator/rotation"
+        android:name="animatorGroup"/>-->
+
+    <!--<target
+        android:animation="@animator/face_morph"
+        android:name="p"/>
+
+    <target
+        android:animation="@animator/face_morph"
+        android:name="p2"/>
+
+    <target
+        android:animation="@animator/face_morph"
+        android:name="left_eye"/>
+
+    <target
+        android:animation="@animator/face_morph"
+        android:name="right_eye"/>
+
+    <target
+        android:animation="@animator/face_morph"
+        android:name="nose"/>-->
+    <!--name指向的vector执行animation指向的动画-->
+    <target
+        android:animation="@animator/face_morph"
+        android:name="mouth"/>
+    <!--pathdata动画-->
+    <target
+        android:animation="@animator/water_morph"
+        android:name="water"/>
+    <!--strimPathStart动画-->
+    <target
+        android:animation="@animator/line_morph"
+        android:name="search_line"/>
+</animated-vector>

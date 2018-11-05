@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="600"
+    android:viewportHeight="600">
+
+    <group android:name="animatorGroup"
+        android:pivotY="200"
+        android:pivotX="200">
+        <path android:name="p"
+            android:strokeColor="@color/colorPrimary"
+            android:strokeWidth="15"
+            android:pathData="M200,200 A100,100 0 1 1 350,200 M200,200 A100,100 0 0 0 350,200"/><!--起点M200,200  A圆半径100,100  rotation：90  取大圆1  顺时针1   圆弧终点想xy：150,0-->
+        <!--和上面一样，取小圆部分0  逆时针0-->
+
+        <path android:name="left_eye"
+            android:strokeColor="@color/colorPrimary"
+            android:fillColor="@color/colorPrimary"
+            android:pathData="M220,90 a10,15 90 0 0 20,0 M220,90 a10,15 90 1 1 20,0"/><!--眼睛上半部圆和下半部圆-->
+
+
+        <path android:name="right_eye"
+            android:strokeColor="@color/colorPrimary"
+            android:fillColor="@color/colorPrimary"
+            android:pathData="M310,90 a10,15 90 0 0 20,0 M310,90 a10,15 90 1 1 20,0"/>
+
+        <path android:name="nose"
+            android:strokeColor="@color/colorPrimary"
+            android:fillColor="@color/colorPrimary"
+            android:pathData="M265,130 a15,10 90 0 0 20,0 M265,130 a15,10 90 1 1 20,0"/>
+
+        <path android:name="mouth"
+            android:strokeColor="@color/colorPrimary"
+            android:strokeWidth="5"
+            android:pathData="M230,180 s45,-60  90,0"/>
+
+        <path android:name="water"
+            android:strokeColor="@color/colorPrimary"
+            android:fillColor="@color/colorPrimary"
+            android:strokeWidth="1"
+            android:pathData="M0,280 c50,60 150,-60 200,0 M200,280 c50,60 150,-60 200,0 M400,280 c50,60 150,-60 200,0"/>
+
+        <!--搜索栏-->
+        <path android:name="search_line"
+            android:strokeWidth="10"
+            android:strokeColor="@color/colorPrimary"
+            android:pathData="M150,380 a25,30 0 1 1 -10,-60 a25,30 0 0 1 10,60 l20,50 LH600"/>
+    </group>
+</vector>

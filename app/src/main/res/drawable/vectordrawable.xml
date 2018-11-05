@@ -12,14 +12,7 @@
 
         <path android:name="v"
             android:fillColor="@color/colorPrimary"
-            android:pathData="M300,300 l 0,-190 190,190 0,0 -190,190z"/>
+            android:pathData="M300,300 l 0,-70 70,70  -70,70 z"/>
     </group>
 
-    <group android:name="customGroup">
-
-        <path android:name="p"
-            android:strokeColor="@color/colorPrimary"
-            android:pathData="M300,300 "/>
-
-    </group>
 </vector>
